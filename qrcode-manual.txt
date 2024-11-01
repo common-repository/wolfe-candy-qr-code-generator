@@ -1,0 +1,54 @@
+<h1>QR Code Generator</h1>
+<h2>Introduction</h2>
+<p>Displays a QR code dynamically on a page or post with URL to that page/post. </p>
+
+<p>There are many QR generators that are avialable for use. Most of these, however, are accessbile via the admin dashboard so you can create site QR codes as media files for download. This plugin also does that but goes one step further - it allows you to use shortcode to dynamically generate a QR code for the page or post being displayed.</p>
+<p>Major features include:
+
+<li> This dynamically generates a QR code in the front-end for the page or post that is being displayed via shortcode.
+<li> This plugin uses the standard PHP generator library so it can also generate a QR code to a file.
+<li> It can also generate a QR code for any data text via shortcode.
+<li> Alter size, error correction and pixel scale via shortcode arguments.
+<li> It is a simple QR code generator so does not support different color styles and logos - it just does what is needs to do.</p>
+
+<h2>Installation</h2>
+<p>Follow the usual Wordpress instructions to install the plugin files. Either copy a ZIP archive of the plugin folder contents into the Word Press plugins folder or install it directly from the Wordpress repositiory.</p>
+
+<h2>Shortcode</h2>
+<p>The following shortcode command can be inserted into any page, post or widget:</p>
+<li><b>[show-qr-code]</b> displays a tree at the shortcode position. Optional arguments can be included to influence the behaviour of the QR code using <b>[show-qr-code arg1="value1" arg2="value2" ...]</b> 
+
+<h2>Usage</h2>
+<p>The following arguments can be used in the shortcode or as POST/GET arguments: </p>
+<li><b>[qrdata=""]</b> The data to encode. The defult is to use the current page or post URL.
+<li><b>[file=null]</b> The filename and path to create a media file.
+<li><b>[ecc="H"]</b> The error coding:<ul>
+<li>QR Code ECC LEVEL L : 7% of the data can be restored.
+<li>QR Code ECC LEVEL M : 15% of the data can be restored.
+<li>QR Code ECC LEVEL Q : 25% of the data can be restored.
+<li>QR Code ECC LEVEL H : 30% of the data can be restored.</ul>
+<li><b>[pixel_size="2"]</b> 
+<li><b>[frame_size="5"]</b> 
+<li><b>[uri="true"]</b>  This determines if the Referer_URI is used as the default page. If false, the Current URL is build according to Wordpress.
+
+<h2>Word Press Developers</h2>
+<p>The QR code can be called using the class <b>WlfC_QRCode</b>. The following are available methods and arguments:</p>
+<li>All of the arguments in the Usage section are available e.g. <b>[show-qr-code qrdata="xxx"]</b> is called as <b>$class->qrdata="";</b>
+<li>Method <b>Build_QRCode()</b> returns the QR code as an HTML IMG tag</p>
+
+<hr>
+<h2>The Small Print....</h2>
+<p>This plugin software is released under the GPLv2 (or later) <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html">GNU General Public License</a> from the Free Software Foundation. Please check restrictions on commercial use or purchase a commercial license.</p>
+<p><a href="https://www.paypal.com/donate/?hosted_button_id=DY2RMD3J4SR3Q">Donate</a> if you are able to so that the plugins can be maintained and enhanced - especially if you use it and find it useful! Feature enhancements can be paid for or requested (BTW they are considered high priority when coming from a donator!).<b>If everyone donated just $1 for every download they use, it keeps the development going!</b></p>
+<P>   This program is distributed in the hope that it will be useful,
+    but <b>WITHOUT ANY WARRANTY</b>; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html">GNU General Public License</a> for more details.
+</P>
+<p>This plugin comes without support unless the licence or enhanced support is explicitly stated as provided. </p>
+<p>The plugin is installed at the user's own risk. No liability is accepted for any damage to data or any consequential damage whatsoever when using this plugin. In any event this is strictly limited to the annual license fee paid.</p>
+<p>Do not expect the code to be top quality. Much of the designs evolve from MVP and often there is redundant code in the files. Most of the code is commented but isnt always consistent. Some of the functions are not as optimised as they could be or the code as well written or structured as it could be. Some chunks of code are commented out for future use. Tinker with it all at your own peril.</p>
+<p>However the code is written with passion - <b>and it works!</b></p>
+<p>Please provide honest feedback and ratings so that the plugin user commmunity can grow.</p>
+<p>Any support issues, feature requests or queries can be emailed to <b><a href="mailto:wolfecandy@ruralcheshire.co.uk">wolfecandy@ruralcheshire.co.uk</a></b>. A response is not guaranteed but our head developer, <b>Jrack Wolfe</b> is keen to hear from you.
+<p><b>&copy Copyright Wolfe Candy Creations 2022</b></p>
